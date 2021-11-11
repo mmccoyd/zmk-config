@@ -13,6 +13,8 @@
 #define ADJ_L    2
 #define RAIS_L   3
 
+#define WORD_L   LC(LEFT)
+#define WORD_R   LC(RIGHT)
 
 / {
         keymap {
@@ -46,7 +48,7 @@
                         bindings = <
 &kp  CAPS     &kp  INS      &none         &none         &none         &none                                                                          &kp  PG_UP    &kp  HOME     &none         &kp  END      &none         &kp  DEL 
 &kp  LCTRL    &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp  LSHFT    &none                                                                          &kp  PG_DN    &kp  LEFT     &kp  UP       &kp  RIGHT    &none         &kp  RCTRL
-&kp  LSHFT    &kp  LC(Z)    &kp  LC(X)    &kp  LC(C)    &kp  LC(V)    &kp  LC(Y)    &kp  C_MUTE                                        &kp  ESC      &none         &kp  LC(LEFT) &kp  DOWN     &kp  LC(RIGHT)&kp  RALT     &kp  RSHFT
+&kp  LSHFT    &kp  LC(Z)    &kp  LC(X)    &kp  LC(C)    &kp  LC(V)    &kp  LC(Y)    &kp  C_MUTE                                        &kp  ESC      &none         &kp  WORD_L   &kp  DOWN     &kp  WORD_R   &kp  RALT     &kp  RSHFT
                             &trans                      &trans        &trans        &trans        &trans                 &trans        &kp  BSPC     &trans        &trans                      &trans    
                         >;
                 };
