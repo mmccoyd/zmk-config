@@ -33,6 +33,8 @@
 &kp  LSHFT    &kp  SEMI     &kp  Q        &kp  J        &kp  K        &kp  X        &kp  GRAVE                                         &kp   ESC     &kp  B        &kp  M        &kp  W        &kp  V        &kp  Z        &kp  RSHFT
                             &kp  ENTER                  &kp  LGUI     &kp  LALT     &mo  NAV_L    &mo  NAV_L             &mo  ADJ_L    &kp  SPACE    &kp  RALT     &kp  RGUI                   &kp  K_APP    
                         >;
+                };
+		
                 nav_layer {
 /* NAV   
  * ------------------------------------------------------------------------------------------------------------------------
@@ -47,6 +49,8 @@
 &kp  LSHFT    &kp  LC(Z)    &kp  LC(X)    &kp  LC(C)    &kp  LC(V)    &kp  LC(Y)    &kp  C_MUTE                                        &kp  ESC      &none         &kp  LC(LEFT) &kp  DOWN     &kp  LC(RIGHT)&kp  RALT     &kp  RSHFT
                             &trans                      &trans        &trans        &trans        &trans                 &trans        &kp  BSPC     &trans        &trans                      &trans    
                         >;
+                };
+		
                 adj_layer {
 /* ADJUST
  * ------------------------------------------------------------------------------------------------------------------------
