@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DVORAK_L 0
-#define NAV_L    0
-#define ADJ_L    0
+#define NAV_L    1
+#define ADJ_L    2
 #define RAIS_L   3
 
 
@@ -32,6 +32,34 @@
 &kp  LCTRL    &kp  A        &kp  O        &kp  E        &kp  U        &kp  I                                                                         &kp  D        &kp  H        &kp  T        &kp  N        &kp  S        &kp  SLASH
 &kp  LSHFT    &kp  SEMI     &kp  Q        &kp  J        &kp  K        &kp  X        &kp  GRAVE                                         &kp   ESC     &kp  B        &kp  M        &kp  W        &kp  V        &kp  Z        &kp  RSHFT
                             &kp  ENTER                  &kp  LGUI     &kp  LALT     &mo  NAV_L    &mo  NAV_L             &mo  ADJ_L    &kp  SPACE    &kp  RALT     &kp  RGUI                   &kp  K_APP    
+                        >;
+                nav_layer {
+/* NAV   
+ * ------------------------------------------------------------------------------------------------------------------------
+ * | CAPS  |  INS  |       |       |       |       |                                   | PG_UP |  HOME |       |  END  |       |  DEL  |
+ * | Ctrl  |  GUI  |  ALT  | CTRL  | SHIFT |       |                                   | PG_DN |  LEFT |   UP  | RIGHT |       | CTRL  |
+ * | Shift | UNDO  |  CUT  | COPY  | PASTE | REDO  |  MUTE |                   |  ESC  |       | WORDL |  DOWN | WORDR | RALT  | SHIFT |
+ *                 |       |-------|       |       |       |       |   |       | BSPC  |       |       |-------|       |              
+ */
+                        bindings = <
+&kp  CAPS     &kp  INS      &none         &none         &none         &none                                                                          &kp  PG_UP    &kp  HOME     &none         &kp  END      &none         &kp  DEL 
+&kp  LCTRL    &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp  LSHFT    &none                                                                          &kp  PG_DN    &kp  LEFT     &kp  UP       &kp  RIGHT    &none         &kp  RCTRL
+&kp  LSHFT    &kp  LC(Z)    &kp  LC(X)    &kp  LC(C)    &kp  LC(V)    &kp  LC(Y)    &kp  C_MUTE                                        &kp  ESC      &none         &kp  LC(LEFT) &kp  DOWN     &kp  LC(RIGHT)&kp  RALT     &kp  RSHFT
+                            &trans                      &trans        &trans        &trans        &trans                 &trans        &kp  BSPC     &trans        &trans                      &trans    
+                        >;
+                adj_layer {
+/* ADJUST
+ * ------------------------------------------------------------------------------------------------------------------------
+ * |       | QWERT | DVORK | COLMK |       |       |                                   |       |       |       |       |       |       |
+ * | BTCLR | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |                                   |       |       |       |       |       |       |
+ * | RESET | BOOTL |       |       |       |       |       |                   |       |       |       |       |       |       |       |
+ *                 |       |-------|       |       |       |       |   |       |       |       |       |-------|       |              
+ */
+                        bindings = <
+&none         &to  DVORAK_L &to  DVORAK_L &to  DVORAK_L &none         &none                                                                          &none         &none         &none         &none         &none         &kp  DEL 
+&bt  BT_CLR   &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                  &none         &nonen        &none         &none         &none         &kp  RCTRL
+&reset        &bootloader   &none         &none         &none         &none         &none                                              &none         &none         &none         &none         &none         &none         &kp  RSHFT
+                            &trans                      &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans                      &trans    
                         >;
                 };
         };
