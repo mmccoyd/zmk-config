@@ -1,13 +1,11 @@
-See [github](https://github.com/mmccoyd/hillside/) for the board description.
+See [github/mmccoyd](https://github.com/mmccoyd/hillside/) for the board description.
 
+The default keymap follows that in QMK and is described
+  [there](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/hillside).
 
-
-The following must be manually enabled in the hillside.conf if desired:
+The following must be manually enabled in the hillside.conf:
 - Encoders
 - Underglow
 
-
-The hardware has an I2C header for haptic feedback and mounts for a trackball.
-But these are not supported in ZMK.
-Handwiring could use that I2C header for a display.
-
+If desired, you could hardware a display to the I2C header
+  that is provided for a haptic feedback board. 
