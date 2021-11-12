@@ -20,3 +20,7 @@
         , <&pro_micro 19 GPIO_ACTIVE_HIGH> // col0 in the schematic
         ;
 };
+
+&right_encoder {
+    status = "okay";
+};

@@ -35,6 +35,8 @@
 &kp  LSHFT    &kp  SEMI     &kp  Q        &kp  J        &kp  K        &kp  X        &kp  GRAVE                                         &kp   ESC     &kp  B        &kp  M        &kp  W        &kp  V        &kp  Z        &kp  RSHFT
                             &kp  ENTER                  &kp  LGUI     &kp  LALT     &mo  NAV_L    &mo  NAV_L             &mo  ADJ_L    &kp  SPACE    &kp  RALT     &kp  RGUI                   &kp  K_APP    
                         >;
+			
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_D>;
                 };
 		
                 nav_layer {
@@ -51,6 +53,8 @@
 &kp  LSHFT    &kp  LC(Z)    &kp  LC(X)    &kp  LC(C)    &kp  LC(V)    &kp  LC(Y)    &kp  C_MUTE                                        &kp  ESC      &none         &kp  WORD_L   &kp  DOWN     &kp  WORD_R   &kp  RALT     &kp  RSHFT
                             &trans                      &trans        &trans        &trans        &trans                 &trans        &kp  BSPC     &trans        &trans                      &trans    
                         >;
+			
+                        sensor-bindings = <&inc_dec_kp PG_UP PG_D &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 		
                 adj_layer {
@@ -67,6 +71,8 @@
 &reset        &bootloader   &none         &none         &none         &none         &none                                              &none         &none         &none         &none         &none         &none         &kp  RSHFT
                             &trans                      &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans                      &trans    
                         >;
+			
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_D>;
                 };
         };
 };
