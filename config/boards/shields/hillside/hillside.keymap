@@ -9,10 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DVORAK_L 0
-#define NAV_L    1
-#define SYM_L    2
-#define NUM_L    3
-#define ADJ_L    4
+#define QWERTY_L 1
+#define NAV_L    2
+#define SYM_L    3
+#define NUM_L    4
+#define ADJ_L    5
 
 #define WORD_L   LC(LEFT)
 #define WORD_R   LC(RIGHT)
@@ -22,6 +23,24 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+/* QWERTY
+ * -------------------------------------------------------------------------------------------------------------------------------------
+ * | TAB   |   Q   |   W   |   E   |   R   |   T   |                                   |   Y   |   U   |   I   |   O   |   P   | BKSPC |
+ * | CTRL  |   A   |   S   |   D   |   F   |   G   |                                   |   H   |   J   |   K   |   L   |   ;   |  '    |
+ * | SHIFT |   Z   |   X   |   C   |   V   |   B   |   `   |                   |  ESC  |   N   |   M   |   ,   |   .   |   /   | SHIFT |
+ * ----------------| ENTER |-------|  GUI  |  ALT  |  Num  |  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |-------|  APP  |----------------
+ */
+                        bindings = <
+&kp  TAB      &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
+&kp  LCTRL    &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  SQT  
+&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  GRAVE                                         &kp   ESC     &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
+                            &kp  ENTER                  &kp  LGUI     &kp  LALT     &mo  NUM_L    &mo  NAV_L             &mo  SYM_L    &kp  SPACE    &kp  RALT     &kp  RGUI                   &kp  K_APP    
+                        >;
+			
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                };
+		
+                dvorak_layer {
 /* DVORAK
  * -------------------------------------------------------------------------------------------------------------------------------------
  * | TAB   |   '   |   ,   |   .   |   P   |   Y   |                                   |   F   |   G   |   C   |   R   |   L   | BKSPC |
