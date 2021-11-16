@@ -8,12 +8,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DVORAK_L 0
-#define QWERTY_L 1
-#define NAV_L    2
-#define SYM_L    3
-#define NUM_L    4
-#define ADJ_L    5
+#define QWERTY_L 0
+#define DVORAK_L 1
+#define COLEMK_L 2
+#define NAV_L    3
+#define SYM_L    4
+#define NUM_L    5
+#define ADJ_L    6
 
 #define WORD_L   LC(LEFT)
 #define WORD_R   LC(RIGHT)
@@ -52,6 +53,24 @@
 &kp  TAB      &kp  SQT      &kp  COMMA    &kp  DOT      &kp  P        &kp  Y                                                                         &kp  F        &kp  G        &kp  C        &kp  R        &kp  L        &kp  BSPC
 &kp  LCTRL    &kp  A        &kp  O        &kp  E        &kp  U        &kp  I                                                                         &kp  D        &kp  H        &kp  T        &kp  N        &kp  S        &kp  SLASH
 &kp  LSHFT    &kp  SEMI     &kp  Q        &kp  J        &kp  K        &kp  X        &kp  GRAVE                                         &kp   ESC     &kp  B        &kp  M        &kp  W        &kp  V        &kp  Z        &kp  RSHFT
+                            &kp  ENTER                  &kp  LGUI     &kp  LALT     &mo  NUM_L    &mo  NAV_L             &mo  SYM_L    &kp  SPACE    &kp  RALT     &kp  RGUI                   &kp  K_APP    
+                        >;
+			
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                };
+		
+                colemak_layer {
+/* COLEMAK-DH
+ * -------------------------------------------------------------------------------------------------------------------------------------
+ * | TAB   |   Q   |   W   |   F   |   P   |   B   |                                   |   J   |   L   |   U   |   Y   |   ;   | BKSPC |
+ * | CTRL  |   A   |   R   |   S   |   T   |   G   |                                   |   M   |   N   |   E   |   I   |   O   |  '    |
+ * | SHIFT |   Z   |   X   |   C   |   D   |   V   |   `   |                   |  ESC  |   K   |   H   |   ,   |   .   |   /   | SHIFT |
+ * ----------------| ENTER |-------|  GUI  |  ALT  |  Num  |  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |-------|  APP  |----------------
+ */
+                        bindings = <
+&kp  TAB      &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
+&kp  LCTRL    &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  SQT  
+&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  GRAVE                                         &kp   ESC     &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
                             &kp  ENTER                  &kp  LGUI     &kp  LALT     &mo  NUM_L    &mo  NAV_L             &mo  SYM_L    &kp  SPACE    &kp  RALT     &kp  RGUI                   &kp  K_APP    
                         >;
 			
@@ -115,13 +134,13 @@
                 adj_layer {
 /* ADJUST
  * -------------------------------------------------------------------------------------------------------------------------------------
- * |       | QWERT | DVORK | COLMK |       |       |                                   |       |       |       |       |       |       |
+ * |       | QWERT | DVORAK| COLEMK|       |       |                                   |       |       |       |       |       |       |
  * | BTCLR | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |                                   |       |       |       |       |       |       |
  * | BOOTL | RESET |       |       |       |       |       |                   |       |       |       |       |       |       |       |
  * ----------------|       |-------|       |       |       |       |---|       |       |       |       |-------|       |----------------
  */
                         bindings = <
-&none         &to  DVORAK_L &to  DVORAK_L &to  DVORAK_L &none         &none                                                                          &none         &none         &none         &none         &none         &kp  DEL 
+&none         &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &none         &none                                                                          &none         &none         &none         &none         &none         &kp  DEL 
 &bt  BT_CLR   &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                  &none         &none         &none         &none         &none         &kp  RCTRL
 &bootloader   &reset        &none         &none         &none         &none         &none                                              &none         &none         &none         &none         &none         &none         &kp  RSHFT
                             &trans                      &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans                      &trans    
