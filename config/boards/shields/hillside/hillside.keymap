@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define QWERTY_L 0
 #define DVORAK_L 1
@@ -134,16 +136,16 @@
                 adj_layer {
 /* ADJUST
  * -------------------------------------------------------------------------------------------------------------------------------------
- * |       | QWERT | DVORAK| COLEMK|       |       |                                   |       |       |       |       |       |       |
- * | BTCLR | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |                                   |       |       |       |       |       |       |
- * | BOOTL | RESET |       |       |       |       |       |                   |       |       |       |       |       |       |       |
+ * |       | QWERTY| DVORAK| COLEMK|       |       |-----------------------------------| EP_ON | EP_OFF|       |       |       |       |
+ * | BTCLR | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       |       |
+ * | BOOTL | RESET |       |OUT_USB|OUT_BLE|       |       |-------------------|RGB_TOG|       |       |       |       |       |       |
  * ----------------|       |-------|       |       |       |       |---|       |       |       |       |-------|       |----------------
  */
                         bindings = <
-&none         &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &none         &none                                                                          &none         &none         &none         &none         &none         &kp  DEL 
-&bt  BT_CLR   &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                  &none         &none         &none         &none         &none         &kp  RCTRL
-&bootloader   &reset        &none         &none         &none         &none         &none                                              &none         &none         &none         &none         &none         &none         &kp  RSHFT
-                            &trans                      &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans                      &trans    
+&none         &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &none         &none                                                                             &ext_power EP_ON  &ext_power EP_OFF  &none         &none         &none         &kp  DEL 
+&bt  BT_CLR   &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none         &none         &none         &kp  RCTRL
+&bootloader   &reset        &none         &out OUT_USB  &out OUT_BLE  &none         &none                                              &rgb_ug RGB_TOG  &none             &none              &none         &none         &none         &kp  RSHFT
+                            &trans                      &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                           &trans    
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
