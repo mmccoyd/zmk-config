@@ -83,14 +83,14 @@
                 nav_layer {
 /* NAV   
  * -------------------------------------------------------------------------------------------------------------------------------------
- * | CAPS  |  INS  |       |       |       |       |-----------------------------------| PG_UP |  HOME |       |  END  |       |  DEL  |
- * | Ctrl  |  GUI  |  ALT  | CTRL  | SHIFT |       |-----------------------------------| PG_DN |  LEFT |   UP  | RIGHT |       | CTRL  |
+ * | CAPS  |  INS  |       |       |       | VOL+  |-----------------------------------| PG_UP |  HOME |       |  END  |       |  DEL  |
+ * | Ctrl  |  GUI  |  ALT  | CTRL  | SHIFT | VOL-  |-----------------------------------| PG_DN |  LEFT |   UP  | RIGHT |       | CTRL  |
  * | Shift | UNDO  |  CUT  | COPY  | PASTE | REDO  |  MUTE |-------------------|  ESC  |       | WORDL |  DOWN | WORDR | RALT  | SHIFT |
  * ----------------|       |-------|       |       |       |       |---|       | BSPC  |       |       |-------|       |----------------
  */
                         bindings = <
-&kp  CAPS     &kp  INS      &none         &none         &none         &none                                                                          &kp  PG_UP    &kp  HOME     &none         &kp  END      &none         &kp  DEL 
-&kp  LCTRL    &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp  LSHFT    &none                                                                          &kp  PG_DN    &kp  LEFT     &kp  UP       &kp  RIGHT    &none         &kp  RCTRL
+&kp  CAPS     &kp  INS      &none         &none         &none         &kp  C_VOL_UP                                                                  &kp  PG_UP    &kp  HOME     &none         &kp  END      &none         &kp  DEL 
+&kp  LCTRL    &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp  LSHFT    &kp  C_VOL_DN                                                                  &kp  PG_DN    &kp  LEFT     &kp  UP       &kp  RIGHT    &none         &kp  RCTRL
 &kp  LSHFT    &kp  LC(Z)    &kp  LC(X)    &kp  LC(C)    &kp  LC(V)    &kp  LC(Y)    &kp  C_MUTE                                        &kp  ESC      &none         &kp  WORD_L   &kp  DOWN     &kp  WORD_R   &kp  RALT     &kp  RSHFT
                             &trans                      &trans        &trans        &trans        &trans                 &mo  ADJ_L    &kp  BSPC     &trans        &trans                      &trans    
                         >;
