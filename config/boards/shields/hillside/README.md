@@ -1,11 +1,14 @@
-See [github/mmccoyd](https://github.com/mmccoyd/hillside/) for the board description.
+Hillside is a split ergonomic keyboard with 3x6+6 choc-spaced keys.
+It has the aggressive stagger of the Ferris but a longer thumb arc and a break-off outer pinky column.
+More information is at [github/mmccoyd](https://github.com/mmccoyd/hillside/).
 
-The default keymap follows that in QMK and is described
-  [there](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/hillside).
+The default keymap is described in
+  [QMK](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/hillside).
+For ZMK, the adjust layer has extra keys for bluetooth, reset, output, and a lack of RGB controls.
 
-The following must be manually enabled in the hillside.conf:
+If used, the following must be manually enabled in hillside.conf:
 - Encoders
 - Underglow
 
-If desired, you could hardware a display to the I2C header
-  that is provided for a haptic feedback board. 
+If desired, you could hardwire a display to the I2C header,
+  which is arranged for a haptic feedback board.
