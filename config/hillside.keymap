@@ -71,9 +71,9 @@
  * ----------------| ENTER |-------|  GUI  |  ALT  |  Num  |  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |-------|  APP  |----------------
  */
                         bindings = <
-&kp  TAB      &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
-&kp  LCTRL    &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  SQT  
-&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  GRAVE                                         &kp   ESC     &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
+&kp  TAB      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  ;        &kp  BSPC
+&kp  LCTRL    &kp  A        &kp  R        &kp  S        &kp  T        &kp  G                                                                         &kp  M        &kp  N        &kp  E        &kp  I        &kp  O        &kp  SQT  
+&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V        &kp  GRAVE                                         &kp   ESC     &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
                             &kp  ENTER                  &kp  LGUI     &kp  LALT     &mo  NUM_L    &mo  NAV_L             &mo  SYM_L    &kp  SPACE    &kp  RALT     &kp  RGUI                   &kp  K_APP    
                         >;
 			
