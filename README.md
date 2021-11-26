@@ -26,8 +26,8 @@ Your copy of the default Hillside keymap is in
 Modify that as needed.
 If you want to enable features,
   modify ./config/hillside.conf.
-The Hillside shield definition is in ./config/boards/shields/hillside,
-    but *should not* need to be modified.
+The Hillside shield definition *should not* need to be modified and is in ./config/boards/shields/hillside.
+The readme there has more information.
 
 Once Hillside is integrated into ZMK,
   it is best to create a zmk-config repo based off of the ZMK
