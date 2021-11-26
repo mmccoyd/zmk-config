@@ -3,8 +3,8 @@
 [![Build](https://github.com/mmccoyd/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/mmccoyd/zmk-config/actions/workflows/build.yml)
 
 This repo provides interim [ZMK](https://zmk.dev/docs) firmware access
- while the Hillside keyboard is integrated into ZMK.
-[Hillside](https://github.com/mmccoyd/hillside) is a split ergonomic keyboard with 3x6+6 choc-spaced keys.
+ while the [Hillside](https://github.com/mmccoyd/hillside) keyboard is integrated into ZMK.
+Hillside is a split ergonomic keyboard with 3x6+4+2 choc-spaced keys.
 
 To build the firmware from this repo:
 - Fork this repo on GitHub
@@ -31,5 +31,5 @@ The Hillside shield definition is in ./config/boards/shields/hillside,
 
 Once Hillside is integrated into ZMK,
   it is best to create a zmk-config repo based off of the ZMK
-  [install instruction](https://zmk.dev/docs/user-setup)
-  instead of using a clone of this repo, as it may change or be deleted.
+  [install instructions](https://zmk.dev/docs/user-setup)
+  instead of using a clone of this repo, as it may change or be removed.
