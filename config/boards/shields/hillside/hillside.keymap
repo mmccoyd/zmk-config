@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
 
 #define QWERTY_L 0
 #define DVORAK_L 1
@@ -86,7 +85,7 @@
  * | CAPS  |  INS  |       |       |       | VOL+  |-----------------------------------| PG_UP |  HOME |       |  END  |       |  DEL  |
  * | Ctrl  |  GUI  |  ALT  | CTRL  | SHIFT | VOL-  |-----------------------------------| PG_DN |  LEFT |   UP  | RIGHT |       | CTRL  |
  * | Shift | UNDO  |  CUT  | COPY  | PASTE | REDO  |  MUTE |-------------------|  ESC  |       | WORDL |  DOWN | WORDR | RALT  | SHIFT |
- * ----------------|       |-------|       |       |       |       |---|       | BSPC  |       |       |-------|       |----------------
+ * ----------------|       |-------|       |       |       |       |---| ADJ_L | BSPC  |       |       |-------|       |----------------
  */
                         bindings = <
 &kp  CAPS     &kp  INS      &none         &none         &none         &kp  C_VOL_UP                                                                  &kp  PG_UP    &kp  HOME     &none         &kp  END      &none         &kp  DEL 
@@ -137,16 +136,16 @@
                 adj_layer {
 /* ADJUST
  * -------------------------------------------------------------------------------------------------------------------------------------
- * |       | QWERTY| DVORAK| COLEMK|       |       |-----------------------------------|       |       |       |       |       |       |
+ * |       | QWERTY| DVORAK| COLEMK|       |       |-----------------------------------|       | EP_OFF| EP_ON |       |       |       |
  * | BTCLR | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       |       |
  * | BOOTL | RESET |       |OUT_USB|OUT_BLE|       |       |-------------------|       |       |       |       |       |       |       |
  * ----------------|       |-------|       |       |       |       |---|       |       |       |       |-------|       |----------------
  */
                         bindings = <
-&none         &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &none         &none                                                                             &none             &none              &none         &none         &none         &kp  DEL 
-&bt  BT_CLR   &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none         &none         &none         &kp  RCTRL
-&bootloader   &reset        &none         &out OUT_USB  &out OUT_BLE  &none         &none                                              &none            &none             &none              &none         &none         &none         &kp  RSHFT
-                            &trans                      &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                           &trans    
+&none         &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &none         &none                                                                             &none             &ext_power EP_OFF  &ext_power EP_ON &none           &none            &kp  DEL 
+&bt  BT_CLR   &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none            &none           &none            &kp  RCTRL
+&bootloader   &reset        &none         &out OUT_USB  &out OUT_BLE  &none         &none                                              &none            &none             &none              &none            &none           &none            &kp  RSHFT
+                            &trans                      &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                              &trans    
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
