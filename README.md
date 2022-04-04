@@ -4,7 +4,7 @@
 
 This repo provides interim [ZMK](https://zmk.dev/docs) firmware access
  while the [Hillside](https://github.com/mmccoyd/hillside) keyboard is integrated into ZMK.
-Hillside is a split ergonomic keyboard with 3x6+4+2 choc-spaced keys.
+Hillside 48 is a split ergonomic keyboard with 3x6+4+2 choc-spaced keys.
 
 To build the firmware from this repo:
 - Fork this repo on GitHub
@@ -21,12 +21,12 @@ To build the firmware from this repo:
 
 Once your board works with the default firmware,
   you can modify the keymap.
-Your copy of the default Hillside keymap is in
-  ./config/hillside.keymap.
+Your copy of the default Hillside 48 keymap is in
+  ./config/hillside48.keymap.
 Modify that as needed.
 If you want to enable features,
-  modify ./config/hillside.conf.
-The Hillside shield definition *should not* need to be modified and is in ./config/boards/shields/hillside.
+  modify ./config/hillside48.conf.
+The Hillside 48 shield definition *should not* need to be modified and is in ./config/boards/shields/hillside48.
 The readme there has more information.
 
 Once Hillside is integrated into ZMK,
