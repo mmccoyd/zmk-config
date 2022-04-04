@@ -9,10 +9,10 @@ Hillside 48 is a split ergonomic keyboard with 3x6+4+2 choc-spaced keys.
 To build the firmware from this repo:
 - Fork this repo on GitHub
 - Clone your fork locally
-- Make some change to this README
+- Make some change to this README to trigger a build.
 - Push that change to your fork on GitHub
 - That change will trigger a build action
-- Look in the actions tab for the build that change triggered
+- Look in the actions tab for the build triggered by that change
 - Wait for the build to finish
 - Click on the build link
 - Download the artifact file with the firmware

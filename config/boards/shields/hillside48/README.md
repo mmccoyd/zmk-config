@@ -3,10 +3,17 @@ It has the aggressive stagger of the Ferris but a longer thumb arc and a break-o
 More information is at [github/mmccoyd](https://github.com/mmccoyd/hillside/).
 
 The default keymap is described in
-  [QMK](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/hillside/keymaps/default).
-For ZMK, the adjust layer has extra keys for bluetooth, reset, output, and a lack of RGB controls.
+  [QMK](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/hillside/).
+  
+For ZMK, the adjust layer has a few differences from the QMK version:
+
+- Extra keys for bluetooth, reset and output.
+- No swap alt gui keys.
+- No RGB controls as RGB eats power.
+- Blue tooth clear is deliberately in an inconvient spot to avoid unpairing.
 
 If used, the following must be manually enabled in hillside48.conf:
+
 - Encoders
 - Underglow
 
