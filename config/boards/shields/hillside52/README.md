@@ -1,9 +1,9 @@
-Hillside48 is a split ergonomic keyboard with 3x6+4+2 choc-spaced keys.
+Hillside 52 is a split ergonomic keyboard with 3x6+3+5 choc-spaced keys.
 It has the aggressive stagger of the Ferris but a longer thumb arc and a break-off outer pinky column.
 More information is at [github/mmccoyd](https://github.com/mmccoyd/hillside/).
 
 The default keymap is described in
-  [QMK](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/hillside/).
+  [QMK](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/hillside/52).
   
 For ZMK, the adjust layer has a few differences from the QMK version:
 
@@ -12,7 +12,7 @@ For ZMK, the adjust layer has a few differences from the QMK version:
 - No RGB controls as RGB eats power.
 - Blue tooth clear is deliberately in an inconvient spot to avoid unpairing.
 
-If used, the following must be manually enabled in hillside48.conf:
+If used, the following must be manually enabled in hillside52.conf:
 
 - Encoders
 - Underglow

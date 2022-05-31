@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2021 The ZMK Contributors
+ * Copyright (c) 2021-2022 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
 
-#include "hillside48.dtsi" 
+#include "hillside52.dtsi" 
 
 &kscan0 {
     col-gpios
