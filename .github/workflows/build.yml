@@ -1,4 +1,9 @@
-on: [push, pull_request, workflow_dispatch]
+on: 
+  push:
+    paths-ignore:
+      - '**.md'
+  pull_request:
+  workflow_dispatch:
 
 name: Build
 
