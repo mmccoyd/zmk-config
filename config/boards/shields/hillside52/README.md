@@ -8,9 +8,9 @@ The default keymap is described in
 For ZMK, the adjust layer has a few differences from the QMK version:
 
 - Extra keys for bluetooth, reset and output.
-- No swap alt gui keys.
+- No swap Alt GUI keys.
 - No RGB controls as RGB eats power.
-- Blue tooth clear is deliberately in an inconvient spot to avoid unpairing.
+- Bluetooth clear is deliberately in an inconvenient spot to avoid unpairing.
 
 If used, the following must be manually enabled in hillside52.conf:
 
