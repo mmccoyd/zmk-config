@@ -1,0 +1,19 @@
+# Copyright (c) 2021-2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_HILLSIDE52_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Hillside52"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_HILLSIDE52_LEFT || SHIELD_HILLSIDE52_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
