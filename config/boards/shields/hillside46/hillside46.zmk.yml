@@ -1,6 +1,6 @@
 file_format: "1"
-id: hillside52
-name: Hillside52
+id: hillside46
+name: Hillside46
 type: shield
 url: https://github.com/mmccoyd/hillside/
 requires: [pro_micro]
@@ -9,5 +9,5 @@ features:
   - encoder
   - underglow
 siblings:
-  - hillside52_left
-  - hillside52_right
+  - hillside46_left
+  - hillside46_right
