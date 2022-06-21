@@ -6,10 +6,11 @@
 This is the [ZMK](https://zmk.dev/docs) firmware
  for the [Hillside](https://github.com/mmccoyd/hillside) family of split ergonomic keyboards.
 
-It contains keymap definition files for two boards in [./config](./config):
+It contains keymap definition files for three boards in [./config](./config):
 
  - Hillside 52 with 3x6+3+5 keys
  - Hillside 48 with 3x6+1+5 keys
+ - Hillside 46 with 3x6+5 keys
 
 Pushing changes will build both keyboards. Comment out one of the keyboards in [./build.yaml](./build.yaml) if you need only one.
 
@@ -33,6 +34,7 @@ Your copies of the default Hillside keymaps are in:
 
 - [./config/hillside52.keymap](./config/hillside52.keymap)
 - [./config/hillside48.keymap](./config/hillside48.keymap)
+- [./config/hillside46.keymap](./config/hillside46.keymap)
 
 Modify those as needed. Pushing the change will trigger a build as above.
 
