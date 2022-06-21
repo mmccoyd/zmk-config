@@ -1,4 +1,4 @@
-Hillside 46 is a split ergonomic keyboard with 3x6+3+5 choc-spaced keys.
+Hillside 46 is a split ergonomic keyboard with 3x6+5 choc-spaced keys.
 It has the aggressive stagger of the Ferris but a longer thumb arc and a break-off outer pinky column.
 More information is at [github/mmccoyd](https://github.com/mmccoyd/hillside/).
 
