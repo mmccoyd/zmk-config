@@ -29,11 +29,6 @@ To build the firmware:
 - See [Installing The Firmware](https://zmk.dev/docs/user-setup#installing-the-firmware)
   for more details from there.
 
-The actions tab also has builds triggered by earlier changes, 
-  but tracing through those for one with your board may take work,
-  and hosting of the generated files expires over time.
-
-
 *Once* your board works with the default firmware,
   you can modify the keymap.
 Your copies of the default Hillside keymaps are in:
