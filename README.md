@@ -48,6 +48,6 @@ While RGB is disabled, any RGB control keys
   behave as transparent keys and activate keys on lower layers,
   which can be confusing.
 
-The Hillside shield definition files *should not* need to be modified and are in ./config/boards/shields.
+The Hillside shield definition files should *not* need to be modified and are in ./config/boards/shields.
 
 More information about each keymap is in their readme files.

@@ -1,5 +1,5 @@
 Hillside48 is a split ergonomic keyboard with 3x6+4+2 choc-spaced keys.
-It has the aggressive stagger of the Ferris but a longer thumb arc and a break-off outer pinky column.
+It has the aggressive stagger of the Ferris but a longer thumb arc and a break-off outer pinkie column.
 More information is at [github/mmccoyd](https://github.com/mmccoyd/hillside/).
 
 The default keymap is described in
