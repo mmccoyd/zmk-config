@@ -41,7 +41,7 @@
 &trans  &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                        &kp  Y     &kp  U  &kp  I      &kp  O   &kp P            &trans
 &trans  &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                        &kp  H     &kp  J  &kp  K      &kp  L   &kp SEMI         &trans
 &trans  &mt LSHIFT Z  &kp  X        &kp  C        &kp  V        &kp  B        &kp  M_CUT                                    &tg WIN_L         &kp  N     &kp  M  &kp  COMMA  &kp  DOT &mt RSHIFT SLASH &trans
-                      &kp  LCTRL                  &kp  LALT     &kp  LGUI     &lt  SPACE W_SYM_L &kp LGUI     &mo  M_SYM_L  &lt ENTER W_NAV_L &kp  BSPC  &trans              &mo ADJ_L   
+                      &kp  LCTRL                  &kp  LALT     &kp  LGUI     &lt  SPACE W_SYM_L &kp LGUI     &mo  M_SYM_L  &lt ENTER W_NAV_L &kp  BSPC  &trans              &mo ADJ_L
                         >;
                 };
 
@@ -92,38 +92,6 @@
 &trans &kp ESC   &trans &trans &trans &trans                                   &trans &kp LEFT &kp DOWN &kp RIGHT &transT  &trans
 &trans &trans    &trans &trans &trans &trans &trans                     &trans &trans &trans   &trans   &trans    &kp BSLH &trans
                  &trans        &trans &trans &trans &trans       &trans &trans &trans &trans            &trans   
-                        >;
-                };
-
-                sym_layer {
-/* SYM
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | HOME  |   !   |   @   |   #   |   $   |   %   |-----------------------------------|   ^   |   &   |   *   |   (   |   )   | BSPC  |
- * | END   |  GUI  |  Alt  | Ctrl  | Shift | Pg Up |-----------------------------------|   -   |   =   |   [   |   ]   |   \   | ENTER |
- * | Shift |  UnDo |  Cut  | Copy  | Paste | Pg Dn |OsAltGr|-------------------| MENU  |   _   |   +   |   {   |   }   |   |   | SHIFT |
- * ----------------|       |-------|       |       |       |       |---| ADJ_L |       |       |       |-------| CTRL  |----------------
- */
-                        bindings = <
-&kp  HOME     &kp  EXCL     &kp  AT       &kp  HASH     &kp  DOLLAR   &kp  PERCENT                                                                   &kp  CARET    &kp  AMPS     &kp  ASTRK    &kp  LPAR     &kp  RPAR     &trans
-&kp  END      &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp  LSHFT    &kp  PG_UP                                                                     &kp  MINUS    &kp  EQUAL    &kp  LBKT     &kp  RBKT     &kp  BSLH     &trans
-&trans        &kp  Undo     &kp  Cut      &kp  Copy     &kp  Paste    &kp  PG_DN    &sk  RALT                                          &kp  K_APP    &kp  UNDER    &kp  PLUS     &kp  LBRC     &kp  RBRC     &kp  PIPE     &trans
-                            &trans                      &trans        &trans        &trans        &trans                 &mo  ADJ_L    &trans        &trans        &trans                      &kp  RCTRL    
-                        >;
-                };
-		
-                num_layer {
-/* NUM   
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | F11   |   1   |   2   |   3   |   4   |   5   |-----------------------------------|   6   |   7   |   8   |   9   |       | BSPC  |
- * | F12   |  F1   |  F2   |  F3   |  F4   |  F5   |-----------------------------------|VOL UP | Shift | Ctrl  | Alt   | Gui   | ENTER |
- * | Shift |  F6   |  F7   |  F8   |  F9   |  F10  |  INS  |-------------------| MUTE  |VOL DN | Left  |  Up   | Down  | Right | DELETE|
- * ----------------|       |-------|       |       |       | ADJ_L |---|       |       |       |       |-------| CTRL  |----------------
- */
-                        bindings = <
-&kp  F11      &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp   N6      &kp   N7      &kp   N8      &kp   N9      &kp  N0       &trans
-&kp  F12      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                        &kp  C_VOL_UP &kp   RSHFT   &kp   RCTRL   &kp   LALT    &kp  RGUI     &trans
-&trans        &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &kp INS                                            &kp  C_MUTE   &kp  C_VOL_DN &kp   LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &kp DEL
-                            &trans                      &trans        &trans        &trans        &mo ADJ_L              &trans        &trans        &trans        &trans                      &kp  RCTRL   
                         >;
                 };
 		
