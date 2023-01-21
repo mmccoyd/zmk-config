@@ -34,3 +34,5 @@ include:
     shield: hillside52_left
   - board: nice_nano_v2
     shield: hillside52_right
+  - board: nice_nano_v2
+    shield: settings_reset
