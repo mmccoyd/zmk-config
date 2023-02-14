@@ -23,29 +23,36 @@
 #define Paste  LC(V)
 #define Redo   LC(Y)
 
+// Home row mods macro
+#define HRML(k1,k2,k3,k4) &ht LCTRL k1 &ht LALT k2  &ht LGUI k3 &ht LSHFT k4
+#define HRMR(k1,k2,k3,k4) &ht RSHFT k4 &ht RGUI k1  &ht RALT k3 &ht RCTRL k2
+
+
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-/* QWERTY
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |   Q   |   W   |   E   |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |   P   | BKSPC |
- * | TAB   |   A   |   S   |   D   |   F   |   G   |-----------------------------------|   H   |   J   |   K   |   L   |   ;   | ENTER |
- * | SHIFT |   Z   |   X   |   C   |   V   |   B   |   '   |-------------------|   /   |   N   |   M   |   ,   |   .   |  Up   | SHIFT |
- * | Mute  |  ESC  | CTRL  |-------|  GUI  |  ALT  |SK SHFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |-------| Left  | Down  | Right |
- */
                         bindings = <
-&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
-&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER
-&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  SQT                                           &kp  SLASH    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RSHFT
-&kp  C_MUTE   &kp  ESC      &kp  LCTRL                  &kp  LGUI     &kp  LALT     &sk  LSHIFT    &mo  NAV_L            &mo  SYM_L    &kp  SPACE    &kp  LALT     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
+                //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                                ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+                //│          │  Q       │  W       │  E       │  R       │  T       │                                                │  Y       │  U       │  I       │  O       │  P       │  Q       │
+                   &kp Q      &kp Q      &kp W      &kp E      &kp R      &kp T                                                       &kp Y      &kp U      &kp I      &kp O      &kp P      &kp Q
+                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                                ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                //│          │  A       │  S       │  D       │  F       │  G       │                                                │  H       │  J       │  K       │  L       │  ;       │ Q        │
+                   &kp Q      HRML(A,        S,         D,         F)     &kp G                                                       &kp H      HRMR(J,        K,         L,       SEMI)    &kp Q
+                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├───────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                //│          │  Z       │  X       │  C       │  V       │  B       │  '       │                         │  /        │  N       │  M       │ , <      │ . >      │  UP      │ Q        │
+                   &kp Q      &kp Z      &kp X      &kp C      &kp V      &kp B      &kp SQT                              &kp SLASH   &kp N      &kp M      &kp COMMA  &kp DOT    &kp UP     &kp Q
+                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼───────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                //  MUTE     |ESC       | ?????    | xxxxxxxx |  FUNL    | ENTER    | SPACE    | TAB      |   |ENTER     | SPACE     | BKSPC    | DEL      | xxxxxxxx | LEFT     |DOWN      |RIGHT     |
+                   &kp C_MUTE &kp ESC    &kp Q                 &kp Q      &kp ENTER  &kp SPACE  &kp TAB        &kp ENTER  &kp SPACE   &kp BSPC   &kp DEL               &kp LEFT   &kp DOWN   &kp RIGHT
+                //
                         >;
-			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+
                 };
-		
+
                 dvorak_layer {
 /* DVORAK
  * -------------------------------------------------------------------------------------------------------------------------------------
@@ -60,10 +67,10 @@
 &kp  LSHFT    &kp  SEMI     &kp  Q        &kp  J        &kp  K        &kp  X        &kp  Z                                             &kp  SLASH    &kp  B        &kp  M        &kp  W        &kp  V        &kp  UP       &kp  RSHFT
 &kp  C_MUTE   &kp  ESC      &kp  LCTRL                  &kp  LGUI     &kp  LALT     &sk  LSHIFT    &mo  NAV_L            &mo  SYM_L    &kp  SPACE    &kp  LALT     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
-		
+
                 colemak_layer {
 /* COLEMAK-DH
  * -------------------------------------------------------------------------------------------------------------------------------------
@@ -78,7 +85,7 @@
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V        &kp  SQT                                           &kp  SLASH    &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RSHFT
 &kp  C_MUTE   &kp  ESC      &kp  LCTRL                  &kp  LGUI     &kp  LALT     &sk  LSHIFT     &mo  NAV_L           &mo  SYM_L    &kp  SPACE    &kp  LALT     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
@@ -96,7 +103,7 @@
 &trans        &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5       &kp Undo                                           &kp  Redo     &kp   F6      &kp  F7      &kp   F8      &kp   F9      &kp  F10      &trans
 &kp  F11      &kp  F12      &trans                      &trans        &trans        &trans        &trans                 &mo ADJ_L     &trans        &trans        &trans                     &kp  RCTRL    &kp  HOME     &kp  END
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
@@ -114,10 +121,10 @@
 &trans        &kp  PIPE     &kp  UNDER    &kp  PLUS     &kp  LBRC     &kp  RBRC     &kp  C_PP                                          &kp C_MUTE    &kp C_VOL_DN  &kp  N0       &kp  N1       &kp  N2       &none         &trans
 &none         &none         &trans                      &trans        &trans        &trans        &mo  ADJ_L               &trans      &trans        &trans        &trans                      &kp  RCTRL    &kp  K_APP    &sk  RALT
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
-		
+
 
                 adj_layer {
 /* ADJUST
@@ -133,7 +140,7 @@
 &bootloader   &reset        &none         &out OUT_USB  &out OUT_BLE  &none         &bt BT_CLR                                         &none            &none             &none              &none            &none           &none            &trans
 &none         &none         &trans                      &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                              &kp  RCTRL      &none            &none
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
         };
