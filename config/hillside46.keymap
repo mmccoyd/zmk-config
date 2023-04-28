@@ -128,7 +128,7 @@
  */
                         bindings = <
 &none         &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &none         &none                                                                             &none             &kp   F11          &kp   F12  &kp PRINTSCREEN   &ext_power EP_OFF  &ext_power EP_ON
-&reset        &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none            &none          &none           &reset
+&sys_reset    &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none            &none          &none           &sys_reset
 &none         &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp LSHIFT    &none         &bt BT_CLR                                         &none            &none             &none              &out  OUT_USB    &out  OUT_BLE  &none           &bootloader
                                                         &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans 
                         >;
